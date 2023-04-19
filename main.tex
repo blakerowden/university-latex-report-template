@@ -1,0 +1,58 @@
+% ===============================================================================
+% UQ Engineering Assignment Template by Blake Rowden
+% ===============================================================================
+%
+% !!! INSTRUCTIONS !!!
+% Step 1: FILL OUT DETAILS BELOW in "YOUR DETAILS." 
+% Step 2: Go to content.tex to write the Assignment
+% NOTE: To add packages, go to LaTexPackages.tex
+%
+% ===============================================================================
+
+%%% YOUR DETAILS ================================================================
+
+\def\name{YOUR NAME}
+\def\coursecode{ENGGXXXX}
+\def\atitle{Assignment X}
+\def\semnum{One/Two}
+\def\stunum{xxxxxxxx}
+
+%%% DO NOT EDIT BELOW (SEE CONTENT.tex) =========================================
+
+\documentclass[12pt,a4paper]{article}
+\input{LaTexPackages}
+
+\topmargin=-0.4in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.4in
+\textheight=9.2in
+\linespread{1.25}
+
+\begin{document}
+
+\begin{titlepage}
+    \color{Fuchsia}
+    \begin{center}
+        \includegraphics[width=12cm]{UQlogo.png}\\[5em]
+        \textbf{
+            \Huge{\coursecode\\[.7em] \atitle}}\\[6em]
+        \color{black}
+        \textbf{\LARGE{Semester \semnum\;\the\year{}}}\\[10em]
+        \Large{by \name}\\
+        \Large{Student Number: \stunum}\\[3em]
+        \large{Submitted: \today}\\
+    \end{center}
+\end{titlepage}
+\thispagestyle{empty}
+\setcounter{page}{1}
+
+\newpage 
+\color{black}
+
+% See content.tex for assignment content
+\input{content}
+
+\end{document}
+
+% ===============================================================================
