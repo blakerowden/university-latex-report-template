@@ -14,4 +14,4 @@
 
 An example of the coverpage can be seen below, you can also see "uq_latex_report_template.pdf" for an example
 
-![Example Title Page](https://github.com/blakerowden/uq-latex-report-template/blob/main/example_titlepage.png)
+![Example Title Page](https://github.com/blakerowden/uq-latex-report-template/blob/main/example_titlepage2.png)
