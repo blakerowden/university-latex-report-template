@@ -1,60 +1,97 @@
-\usepackage[usenames,dvipsnames]{color}
-\usepackage[pdftex]{graphicx}
-\usepackage{natbib}	
-\usepackage{amssymb}
-\usepackage{amsmath}
-\usepackage{array}
-\usepackage{delarray}
-\usepackage{hyperref}
-\usepackage[T1]{fontenc}
-\usepackage{eso-pic}
-\usepackage{graphicx}
-\usepackage{color}
+% ***************************************************
+% LaTeX Packages
+% ***************************************************
 
-\usepackage[utf8]{inputenc}
-\usepackage{parskip}
-\usepackage[dvipsnames]{xcolor}
-\usepackage{minted}
-\usepackage{svg}
-\usepackage{caption}
-\usepackage{subcaption}
-\usepackage{matlab-prettifier}
+% Colors
+\usepackage[usenames,dvipsnames]{xcolor}
 
-\newcommand{\un}{\underline}
-\newcommand{\barr}{\begin{array}}
-\newcommand{\earr}{\end{array}}
-\newcommand{\ba}{\begin{array}}
-\newcommand{\ea}{\end{array}}
-\newcommand{\beq}{\begin{equation}}
-\newcommand{\eeq}{\end{equation}}
-\newcommand{\be}{\begin{equation}}
-\newcommand{\ee}{\end{equation}}
-\newcommand{\beqa}{\begin{eqnarray}}
-\newcommand{\eeqa}{\end{eqnarray}}
-\newcommand{\bea}{\begin{eqnarray}}
-\newcommand{\eea}{\end{eqn\textcolor{burntorange}array}}
-\newcommand{\bc}{\begin{center}}
-\newcommand{\ec}{\end{center}}
-\newcommand{\bi}{\begin{itemize}}
-\newcommand{\ei}{\end{itemize}}
-\newcommand{\bd}{\begin{description}}
-\newcommand{\ed}{\end{description}}
-\newcommand{\bn}{\begin{enumerate}}
-\newcommand{\en}{\end{enumerate}}
-\newcommand{\bq}{\begin{quote}}
-\newcommand{\eq}{\end{quote}}
-\newcommand{\bv}{\begin{verbatim}}
-\newcommand{\ev}{\end{verbatim}}
-\newcommand{\arro}{\Leftrightarrow}
-\newcommand{\nopagenumber}{\thispagestyle{empty}}
-\newcommand{\nopagenumbers}{\pagestyle{empty}}
-\newcommand{\QED}{\hfill $\Box$}
-\newcommand{\ul}{\underline}
-\newcommand{\ol}{\overline}
+% Math
+\usepackage{amsmath}    % Typesetting theorems (AMS style).
+\usepackage{amssymb}    % Provides an extended symbol collection.
+\usepackage{bm}         % Bolded maths characters.
+\usepackage{mathtools}  % Can be used to fine-tune the maths presentation.
+\usepackage{mathdots}   % Changed the basic LaTeX and plain TeX commands.
+\usepackage{eucal}      % Font shape definitions to use the Euler script symbols in math mode.
+\usepackage{stmaryrd}   % The StMary’s Road symbol font.
+\usepackage{amsthm}     % St Mary Road symbols for theoretical computer science.
+\usepackage{upgreek}    % Upright Greek characters.
+\usepackage{dsfont}     % Double-struck fonts.
+\usepackage{simplewick} % For typesetting Wick contractions.
+
+% Citations and Bibliography
+\usepackage{biblatex}   % Flexible citation styles and bibliography.
+\usepackage{hyperref}   % For adding hyperlinks to your document.
+\usepackage{cleveref}   % Better cross-referencing with support for multiple formats.
+\usepackage{booktabs}   % Publication
+
+% Graphics and Figures
+\usepackage{graphicx}   % Enhanced support for graphics.
+\usepackage{svg}        % Include SVG graphics.
+\usepackage{float}      % Improved interface for floating objects.
+\usepackage{subcaption} % Subfigures and subcaptions.
+\usepackage{wrapfig}    % Lets you wrap text around figures.
+\usepackage{pdfpages}   % Allows you to include full-page pdfs.
+\usepackage{tikz}       % To create graphic elements.
+\usepackage[figuresright]{rotating} % Allows large tables to be rotated to landscape.
+
+% Tables
+\usepackage{array}      % Extending the array and tabular environments.
+\usepackage{longtable}  % Allow tables to flow over page boundaries.
+
+% Text
+\usepackage{lipsum}             % Easy access to the Lorem Ipsum dummy text.
+\usepackage{parskip}            % For spacing between paragraphs.
+\usepackage{microtype}          % pdfLaTeX will fix your kerning.
+\usepackage{marvosym}           % Include symbols (like the Euro symbol, etc.).
+\usepackage{transparent}        % Nice for scalable pdf graphics using InkScape.
+\usepackage{mdframed,mdwlist}   % Use these for nice lists (less white space).
+\usepackage{enumerate}          % Enumerate with redefinable labels.
+
+% Code and Listings
+\usepackage{minted}             % Syntax highlighting for code.
+\usepackage{matlab-prettifier}  % Format MATLAB code for inclusion in LaTeX documents.
+\usepackage{listings}           % For including source code listings in your document.
+
+% Other
+\usepackage{eso-pic}    % Add background images or text to every page.
+\usepackage{bm}         % Bold symbols in math mode.
+\usepackage{framed}     % For boxed text.
+\usepackage{fancyhdr}   % Extensive control of page headers and footers.
+\usepackage{placeins}   % Lets you put in a \FloatBarrier to stop figures floating past this command.
+\usepackage{pifont}     % Access to PostScript standard Symbol and Dingbats fonts.
+\usepackage{xy}         % This is a special package for drawing diagrams.
+\usepackage{hyperref}   % For clickable links within the PDF.
 
 
-\renewcommand{\familydefault}{cmr}
-
-\newtheorem{prop}{Proposition}
-\newtheorem{coro}{Corollary}
-\newtheorem{lemma}{Lemma}
+% Abbreviations
+\newcommand{\via}{\textit{via}} % Italicized via.
+\newcommand{\ie}{\textit{i.e.}} % Literally.
+\newcommand{\eg}{\textit{e.g.}} % For example.
+\newcommand{\etc}{\textit{etc.}} % And so on.
+\newcommand{\vv}{\textit{vice versa}} % And the other way around.
+\newcommand{\viz}{\textit{viz.}} % Resulting in.
+\newcommand{\cf}{\textit{cf.}} % See or consistent with.
+\newcommand{\apr}{\textit{a priori}} % Before the fact.
+\newcommand{\apo}{\textit{a posteriori}} % After the fact.
+\newcommand{\vivo}{\textit{in vivo}} % In the flesh.
+\newcommand{\situ}{\textit{in situ}} % On location.
+\newcommand{\silico}{\textit{in silico}} % Simulation.
+\newcommand{\vitro}{\textit{in vitro}} % In glass.
+\newcommand{\vs}{\textit{vs.}} % James vs. Pete.
+\newcommand{\ala}{\textit{`{a} la}} % In the manner of.
+\newcommand{\apriori}{\textit{a priori}} % Before hand.
+\newcommand{\etal}{\textit{et al.}} % And others, with correct punctuation.
+\newcommand{\naive}{na"\i{}ve} % Queen Amidala is young and \naive{}.
+\newcommand{\cfeg}{\textit{cf.}\ \textit{e.g.}} % See for example.
+\newcommand{\cfie}{\textit{cf.}\ \textit{i.e.}} % See literally.
+\newcommand{\etalp}{\textit{et al.}\ } % And others, with space after.
+\newcommand{\etalpp}{\textit{et al.}} % And others, without space after.
+\newcommand{\wrt}{\textit{w.r.t.}} % With respect to.
+\newcommand{\aka}{\textit{a.k.a.}} % Also known as.
+\newcommand{\ibid}{\textit{ibid.}} % Same as previous citation.
+\newcommand{\cfalso}{\textit{cf.}\ also} % See also.
+\newcommand{\interalia}{\textit{inter alia}} % Among other things.
+\newcommand{\per}{\textit{per}} % By the means of.
+\newcommand{\vizie}{\textit{viz.}\ \textit{i.e.}} % Resulting in literally.
+\newcommand{\noloc}{\textit{n.p.}} % No location.
+\newcommand{\nopub}{\textit{n.p.}} % No publisher.
